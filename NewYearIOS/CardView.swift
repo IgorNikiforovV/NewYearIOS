@@ -17,21 +17,19 @@ import SwiftUI
 struct CardView: View {
     var body: some View {
         VStack {
-            Image("image")
+            Image("Сhristmas_winter")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
 
             HStack {
                 VStack(alignment: .leading) {
                     Text("Подборка 2024")
-                        .font(.title)
-                        .fontWeight(.black)
+                        .font(.headline)
                         .foregroundColor(.primary)
-                        .lineLimit(3)
-                        .minimumScaleFactor(0.5)
                     Text("Frank Sinatra — Christmas Dreaming")
-                        .font(.caption)
+                        .font(.subheadline)
                         .foregroundColor(.secondary)
+
                 }
 
                 Spacer()
@@ -43,15 +41,14 @@ struct CardView: View {
                         .resizable()
                         .frame(width: 40, height: 40)
                 }
-
-
             }
             .padding()
         }
-        .cornerRadius(10)
+        .cornerRadius(20)
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 20)
                 .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
+                .shadow(radius: 5)
         )
         .padding([.top, .horizontal])
     }
